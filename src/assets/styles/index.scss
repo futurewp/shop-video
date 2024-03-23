@@ -1,0 +1,23 @@
+@import './flex.scss';
+@import './project.scss';
+@import './root.scss';
+@import './vant.scss';
+@import './scroll.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: PingFangSC, PingFangSC-Medium;
+}
+body {
+  background-color: $-primary-color-body-background;
+}
+
+::placeholder {
+  color: $-primary-color-placeholder;
+}

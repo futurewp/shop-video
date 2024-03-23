@@ -1,0 +1,181 @@
+
+.morePoints {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.app-container {
+  height: 100vh;
+  overflow-y: scroll;
+  font-size: 12px;
+}
+
+::-webkit-scrollbar { /*滚动条整体样式*/
+  width: 0; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 0;
+}
+.view-container {
+  // width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  font-size: 12px;
+
+  .view-component,
+  .view-component > .content,
+  & > .content {
+    width: 100%;
+    height: 100%;
+
+    & > .item-content {
+      & ~ .item-content {
+        margin-top: $-margin-size-middle;
+      }
+      padding: $-padding-size-middle;
+    }
+  }
+}
+.rich_html{
+  img{
+    max-width: 100%;
+  }
+}
+
+// theme color
+.color-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: $-primary-color-title;
+}
+.color-info {
+  color: $-primary-color-info;
+}
+.color-icon {
+  color: $-primary-color-icon;
+}
+.color-header {
+  color: $-primary-color-header;
+}
+.color-title-sub {
+  color: $-primary-color-title-sub;
+}
+.color-label {
+  color: $-primary-color-label;
+}
+.color-value {
+  color: $-primary-color-value;
+}
+.color-green {
+  color: #488DEC;
+}
+.color-yellow {
+  color: #FFA800;
+}
+.color-mark,
+.color-price {
+  color: $-primary-color-price;
+}
+
+// theme class
+.classTag {
+  border-radius: 2px;
+  background: #FFB36F;
+  color: #FF7A04;
+}
+
+.theme-footer {
+  @include footer();
+}
+
+.theme-btn {
+  @include themeBtn();
+}
+
+.theme-btn-default {
+  @include themeBtn($white, 1, 5px, $-primary-color, $-primary-color);
+}
+
+.theme-tag {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 1px 6px;
+  background: rgba($color: #00A86B, $alpha: 0.1);
+  color: $-primary-color;
+}
+
+.theme-weight-tag {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 1px 6px;
+  background: rgba($color: $-primary-color, $alpha: 1);
+  color: $white;
+}
+
+.theme-price {
+  font-weight: bold;
+  font-size: 14px;
+  color: $-primary-color-price;
+}
+
+.border-top {
+  border-top: $-border-solid;
+}
+
+.border-bottom {
+  border-bottom: $-border-solid;
+}
+
+.border-left {
+  border-left: $-border-solid;
+}
+
+.border-right {
+  border-right: $-border-solid;
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  i {
+    margin-right: 3px;
+  }
+}
+
+.line-space-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// stage colors
+// 种子期
+.projectStage1 {
+  color: $-busi-color-seed;
+}
+// 初创期
+.projectStage2 {
+  color: $-busi-color-startup;
+}
+// 成长期
+.projectStage3 {
+  color: $-busi-color-growup;
+}
+// 扩张期
+.projectStage4 {
+  color: $-busi-color-expansion;
+}
+// 成熟期
+.projectStage5 {
+  color: $-busi-color-mature;
+}
+// ipo
+.projectStage6 {
+  color: $-busi-color-Pre_IPO;
+}

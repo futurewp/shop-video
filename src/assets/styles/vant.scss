@@ -1,0 +1,44 @@
+// 覆盖vant
+
+.van-search__content {
+  background-color: #f3f3f4;
+  border-radius: 17px;
+}
+
+.van-tabs__line {
+  background-color: $-primary-color;
+}
+
+// 按钮覆盖
+.van-dialog__confirm{
+  color: $-primary-color !important;
+}
+.van-cell {
+  color: $-color-6;
+
+  .van-cell__title {
+    max-width: 30%;
+  }
+}
+
+.van-swipe-item {
+  .van-image {
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+span.van-dropdown-menu__bar {
+  box-shadow: unset;
+}
+
+span.van-dropdown-menu__title {
+  font-size: 14px;
+  color: $-primary-color-info;
+}
+
+.van-tag--primary {
+  color: $-primary-color !important;
+  background: #f3f3f4 !important;
+  padding: 5px 10px;
+}

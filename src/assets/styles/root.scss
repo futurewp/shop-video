@@ -1,0 +1,13 @@
+:root {
+  --app-font-size: 12px;
+
+  // vant
+  --vant-text-color: #{$-primary-color-title};
+  --vant-card-price-color: #{$-primary-color-price};
+  --van-step-font-size: 10px!important;
+  --van-skeleton-avatar-background-color: $white!important;
+
+  --vant-primary-color: #{$-primary-color};
+  --van-primary-color: #{$-primary-color};
+  --van-field-label-color: #{$-primary-color-label};
+}

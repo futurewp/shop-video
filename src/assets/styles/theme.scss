@@ -1,0 +1,160 @@
+$-primary-color: #D81E06;
+$-primary-color-weight: #f63117;
+$-primary-color-light: #f9533d;
+
+$-primary-color-header:#2C4343;
+$-primary-color-title: #2C4343;
+$-primary-color-title-sub: #909B99;
+$-primary-color-label: #222222;
+$-primary-color-value: #323E41;
+$-primary-color-unit: #666666;
+$-primary-color-more: #2C4343;
+$-primary-color-info: #999;
+$-primary-color-down: $-primary-color;
+$-primary-color-up: #D81E06;
+$-primary-color-price: #D81E06;
+$-primary-color-mark: #FF9907;
+$-primary-color-icon: $-primary-color;
+$-primary-color-divider: rgba($color: #C7C7C7, $alpha: 0.4);
+$-primary-color-body-background: #f7f7f7;
+$-primary-color-placeholder: rgba($color: #000, $alpha: 0.36);
+$-primary-color-border: rgba($color: #C7C7C7, $alpha: 0.4);
+$-primary-bg-color-tag: rgba(255, 179, 111, 0.10);
+
+// business color
+$-busi-color-seed: $-primary-color;
+$-busi-color-startup: $-primary-color;
+$-busi-color-growup: #F77D3F;
+$-busi-color-expansion: $-primary-color;
+$-busi-color-mature: $-primary-color;
+$-busi-color-Pre_IPO: $-primary-color;
+
+// color
+$white: #fff;
+$black: #000;
+$mark: $-primary-color-price;
+$-color-f5: #f5f5f5;
+$-color-3: #333;
+$-color-4: #444;
+$-color-6: #666;
+$-color-8: #888 ;
+$-color-8-l: #87C7C6 ;
+$-color-9: #999;
+$-color-e0: #e0e0e0;
+$-color-e1: #e1e1e1;
+$-color-e: #eee;
+$-color-f2: #F2F2F2;
+$-color-f7: #f7f7f7;
+$-color-sub: #01F7FF;
+$-color-info-light: $-color-8-l;
+$-color-weight-light: #0DFFE0;
+
+// font size
+$-font-size-title-mini: 14px;
+$-font-size-title-small: 16px;
+$-font-size-title-middle: 18px;
+$-font-size-title-large: 20px;
+
+// border
+$-border-solid: 1px solid $-primary-color-border;
+$-border-dashed: 1px dashed $-primary-color-border;
+
+// padding
+$-padding-size-mini: 5px;
+$-padding-size-small: 10px;
+$-padding-size-middle: 15px;
+$-padding-size-large: 20px;
+$-padding-size-layout: 12px;
+$-padding-size-content: 12px;
+
+// margin
+$-margin-size-mini: 5px;
+$-margin-size-small: 10px;
+$-margin-size-middle: 15px;
+$-margin-size-large: 20px;
+$-margin-size-layout: 12px;
+
+// border-radius
+$-border-radius-mini: 2px;
+$-border-radius-small: 4px;
+$-border-radius-middle: 6px;
+$-border-radius-large: 8px;
+
+// layout
+$-page-header-height: 50px;
+$-page-footer-height: 50px;
+$-page-breadcrumb-height: 48px;
+$-page-side-width: 220px;
+$-page-main-center-width: 1540px;
+$-page-header-padding: 12px;
+$-page-content-padding: $-padding-size-layout;
+$-page-item-padding: 12px;
+$-home-search-width: 700px;
+$-theme-box-radius: 6px;
+
+// theme
+$-color-bg: $-color-f5;
+$-color-box-shadow: rgba(34, 123, 124, 0.1);
+$-box-shadow: 0 1px 6px 0 $-color-box-shadow;
+$-theme-border: 1px solid #373C43;
+$-theme-header-light: $-primary-color-light;
+$-theme-header-dark: $-primary-color-weight;
+$-theme-content-light: #03131a;
+$-theme-content-dark: #01182f;
+
+$-theme-btn-linear-gradient: linear-gradient(to right, $-primary-color-light 0%, $-primary-color-weight 100%);
+$-theme-box-header-linear-gradient: linear-gradient(to right, $-theme-header-dark 0%, $-theme-header-light 100%);
+$-theme-box-content-linear-gradient: linear-gradient(0deg, $white 0%, $white 100%);
+$-theme-box-content-active-linear-gradient: linear-gradient(0deg, $-theme-content-light 0%, $-theme-content-dark 100%);
+
+
+// mixin
+@mixin ellipsisMultiline($number: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number;
+}
+
+@mixin dividerVertical($height: 30px) {
+  width: 1px;
+  height: $height;
+  background: $-primary-color-divider;
+}
+
+@mixin themeBtn($color: #488DEC, $opacity: 1, $borderRadius: 5px, $borderColor: #488DEC, $fontColor: $white) {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+  background: rgba($color: $color, $alpha: $opacity);
+  color: $fontColor;
+  &.dashed {
+    border: 1px dashed $color;
+  }
+}
+
+@mixin footer($footerHeight: 50px) {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $footerHeight;
+  display: flex;
+  align-items: center;
+  padding: 0 $-padding-size-layout;
+  box-shadow: 0px 0px 10px 0px $-color-box-shadow;
+  background: $white;
+  z-index: 9;
+  font-size: 16px;
+  text-align: center;
+  & > .btn {
+    flex: 1;
+    & ~ .btn {
+      margin-left: $-margin-size-layout;
+    }
+  }
+}
